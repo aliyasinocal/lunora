@@ -37,7 +37,8 @@ export default function Footer() {
           <Link href="/koleksiyonlar" className="hover:text-gold transition">Koleksiyonlar</Link>
           <Link href="/urunler" className="hover:text-gold transition">Tüm Ürünler</Link>
           <Link href="/kategori/ritual-setleri" className="hover:text-gold transition">Ritüel Setleri</Link>
-          <Link href="/kategori/mum-ve-tutsu" className="hover:text-gold transition">Mum & Tütsü</Link>
+          <Link href="/kategori/aroma-ve-difuzor" className="hover:text-gold transition">Aroma & Difüzör</Link>
+          <Link href="/kategori/aydinlatma" className="hover:text-gold transition">Aydınlatma</Link>
           <Link href="/jurnal" className="hover:text-gold transition">Jurnal</Link>
         </div>
 

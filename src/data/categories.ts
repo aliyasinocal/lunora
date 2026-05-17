@@ -11,22 +11,13 @@ export const categories: Category[] = [
     hero: "/images/products/essence-set-navy.jpg",
   },
   {
-    slug: "mum-ve-tutsu",
-    name: "Mumlar & Tütsü",
+    slug: "aroma-ve-difuzor",
+    name: "Aroma & Difüzör",
     description:
-      "Doğal soya mumları ve elde sarılmış tütsüler — kokunun gücüyle sakinleşen anlar.",
+      "Seramik difüzörler, esansiyel yağlar ve atmosferi dönüştüren aksesuarlar.",
     intro:
-      "Alev, dumanı; duman, anıyı taşır. Doğal mum ve tütsülerimiz hem zihni hem mekânı hafifletmek için imal edildi.",
-    hero: "/images/products/essence-set-cream.jpg",
-  },
-  {
-    slug: "vucut-ve-cilt",
-    name: "Vücut & Cilt",
-    description:
-      "Soğuk preslenmiş yağlar, ipeksi serumlar ve bakım dokunuşları.",
-    intro:
-      "Vücudunla yeniden tanışmak için sade ama besleyici formüller. Her şişe, küçük partilerle, elle dolduruldu.",
-    hero: "/images/products/essence-set-navy.jpg",
+      "Bir kokunun zihni nasıl yeniden inşa edebileceğini hatırlatan tasarımlar. Tüm seramikler Söğüt'te elde üretiliyor.",
+    hero: "/images/products/diffuser-navy.jpg",
   },
   {
     slug: "aydinlatma",
@@ -37,15 +28,6 @@ export const categories: Category[] = [
     hero: "/images/products/rope-lamp-navy.jpg",
   },
   {
-    slug: "aroma-ve-difuzor",
-    name: "Aroma & Difüzör",
-    description:
-      "Seramik difüzörler, esansiyel yağlar ve atmosferi dönüştüren aksesuarlar.",
-    intro:
-      "Bir kokunun zihni nasıl yeniden inşa edebileceğini hatırlatan tasarımlar. Tüm seramikler Söğüt'te elde üretiliyor.",
-    hero: "/images/products/diffuser-navy.jpg",
-  },
-  {
     slug: "olumlama-ve-mindfulness",
     name: "Olumlama & Mindfulness",
     description:
@@ -53,14 +35,6 @@ export const categories: Category[] = [
     intro:
       "Sözcükler ritüelin ta kendisidir. Her kart, kendine dönmek için bir ara nefes vermek üzere tasarlandı.",
     hero: "/images/products/affirmation-cards-cream.jpg",
-  },
-  {
-    slug: "aksesuarlar",
-    name: "Aksesuarlar",
-    description: "Gua sha taşları, jade silindirler ve bakım aksesuarları.",
-    intro:
-      "Geleneksel bilgeliğin modern, premium yorumu. Cilt ritüelini bir meditasyona dönüştüren araçlar.",
-    hero: "/images/products/essence-set-cream.jpg",
   },
 ];
 
