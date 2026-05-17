@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lunora — Sakinliğin Özü
 
-## Getting Started
+Premium ev ritüel objeleri markası **Lunora** için kurumsal e-ticaret demo sitesi.
 
-First, run the development server:
+> *Dur. Nefes al. Kendine dön.*
+
+## Hakkında
+
+Lunora, evinin içinde sana ait sakin bir alan yaratmak için tasarlanmış el yapımı ritüel objeleri sunan, üst gelir grubuna hitap eden bir premium markadır. Bu repo, müşteriye sunum için hazırlanmış **frontend-only** demo siteyi içerir. Gerçek ödeme altyapısı barındırmaz, mock akış kullanır.
+
+## Teknik
+
+- **Framework:** Next.js 16 (App Router, Turbopack)
+- **Diller:** TypeScript, Türkçe içerik
+- **Stil:** Tailwind CSS v4 (özel tema: lacivert + krem + altın)
+- **Animasyon:** Framer Motion
+- **Tipografi:** Fraunces (serif) + Plus Jakarta Sans (sans)
+- **State:** React Context (sepet, favoriler, mock auth)
+- **Persistence:** localStorage
+
+## Sayfa Yapısı
+
+| Yol | Açıklama |
+| --- | --- |
+| `/` | Anasayfa — hero, koleksiyonlar, manifesto, kategoriler, bestseller, jurnal |
+| `/koleksiyonlar` | Tüm koleksiyonlar |
+| `/koleksiyonlar/[slug]` | Koleksiyon detay (Essence of Calm, Ritual of Rest, Moonlit Edition) |
+| `/urunler` | Tüm ürünler + filtre, arama, sıralama |
+| `/kategori/[slug]` | Kategori bazlı liste |
+| `/urun/[slug]` | Ürün detay (galeri, koku notaları, ritüel rehberi, akordeon bilgi) |
+| `/sepet` | Sepet sayfası |
+| `/odeme` | 3 adımlı mock checkout (teslimat → kargo → ödeme) |
+| `/odeme/basarili` | Sipariş başarı ekranı |
+| `/favoriler` | Favori ürünler |
+| `/giris`, `/uyelik`, `/hesabim` | Mock üyelik akışı |
+| `/hikayemiz` | Marka hikâyesi, misyon, vizyon, değerler |
+| `/jurnal`, `/jurnal/[slug]` | Blog liste + detay (6 yazı) |
+| `/magazalar` | 5 fiziksel mağaza listesi |
+| `/iletisim` | İletişim formu, sosyal medya |
+| `/kurumsal-hediye` | B2B talep formu |
+| `/sss` | Sıkça sorulan sorular |
+| `/kvkk`, `/gizlilik`, `/kullanim-kosullari`, `/cerez-politikasi`, `/iade-ve-teslimat` | Yasal sayfalar |
+
+## Geliştirme
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Üretim Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+Repoyu GitHub'a pushladıktan sonra Vercel ile bağlanması yeterli; ek yapılandırma gerekmez.
 
-To learn more about Next.js, take a look at the following resources:
+## Ürün Verisi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+32 ürün `src/data/products.ts` içinde tanımlı. Görseller `public/images/products/` altında.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Marka Renkleri
 
-## Deploy on Vercel
+- **Ink** `#0b1428` (lacivert / akşam paleti)
+- **Sand** `#f6efe2` (krem / sabah paleti)
+- **Gold** `#c8a668` (altın aksanı)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tagline
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> Dur. Nefes al. Kendine dön.
+
+---
+
+Türkiye'de el yapımı.
