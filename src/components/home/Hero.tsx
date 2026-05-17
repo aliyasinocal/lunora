@@ -205,32 +205,6 @@ export default function Hero() {
             <span className="text-[10px] uppercase tracking-wider-3">Limited</span>
           </motion.div>
 
-          {/* Floating product card — bottom right */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.4 }}
-            className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 lg:bottom-8 lg:left-auto lg:right-8 lg:max-w-[320px]"
-          >
-            <Link
-              href="/urun/essence-of-calm-ritual-seti-navy"
-              className="group flex items-center gap-3 bg-ink/55 backdrop-blur-md border border-sand/15 hover:border-gold/60 p-3.5 hover:bg-ink/75 transition-all duration-500"
-            >
-              <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse flex-shrink-0" />
-              <div className="flex-1 min-w-0 text-left">
-                <div className="text-[9px] uppercase tracking-wider-2 text-gold/90">
-                  Bestseller · 4 parça
-                </div>
-                <div className="font-serif text-sm text-sand truncate mt-0.5">
-                  Essence of Calm Ritüel Seti
-                </div>
-              </div>
-              <div className="text-sand text-sm whitespace-nowrap font-medium">4.850 ₺</div>
-              <span className="text-gold group-hover:translate-x-1 transition flex-shrink-0">
-                →
-              </span>
-            </Link>
-          </motion.div>
         </div>
       </div>
 
