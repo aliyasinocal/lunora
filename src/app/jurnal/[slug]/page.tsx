@@ -45,16 +45,18 @@ export default async function JournalPostPage(props: PageProps<"/jurnal/[slug]">
         </Container>
       </section>
 
-      <div className="relative aspect-[16/9] md:aspect-[21/9] w-full bg-sand-deep">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
+      <Container size="default" className="py-8">
+        <div className="relative aspect-[4/5] md:aspect-[16/10] w-full bg-sand-deep max-w-3xl mx-auto">
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            priority
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
+      </Container>
 
       <Container size="narrow" className="py-16 md:py-24">
         <article className="prose prose-lg max-w-none">
