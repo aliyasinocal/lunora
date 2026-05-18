@@ -17,7 +17,7 @@ export default function StoresPage() {
         subtitle="İstanbul'dan Bodrum'a kadar Türkiye'nin dört bir yanında Lunora'yı yerinde deneyimleyebileceğin küçük mağazalarımız."
       />
       <Container size="wide" className="py-16 md:py-20">
-        <div className="grid md:grid-cols-2 gap-px bg-ink/10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/10">
           {stores.map((store) => (
             <div key={store.id} className="bg-sand p-7 md:p-10 hover:bg-sand-soft transition">
               <div className="flex items-start justify-between mb-5">

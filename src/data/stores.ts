@@ -41,4 +41,12 @@ export const stores: Store[] = [
     phone: "+90 252 385 41 09",
     hours: "Sezon: Her gün 12:00 - 24:00",
   },
+  {
+    id: "s-sogut",
+    city: "Bilecik",
+    name: "Lunora Söğüt Atölye",
+    address: "Yıldırım Mh. Atatürk Cad. No: 88, Söğüt / Bilecik",
+    phone: "+90 228 471 22 14",
+    hours: "Sadece randevulu · Pzt - Cum: 10:00 - 17:00",
+  },
 ];
