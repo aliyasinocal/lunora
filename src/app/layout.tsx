@@ -7,6 +7,9 @@ import Announcement from "@/components/layout/Announcement";
 import { CartProvider } from "@/lib/cart-context";
 import { FavoritesProvider } from "@/lib/favorites-context";
 import { AuthProvider } from "@/lib/auth-context";
+import { ToastProvider } from "@/lib/toast-context";
+import { RecentlyViewedProvider } from "@/lib/recently-viewed-context";
+import CookieBanner from "@/components/layout/CookieBanner";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -53,14 +56,19 @@ export default function RootLayout({
     <html lang="tr" className={`${fraunces.variable} ${jakarta.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-sand text-ink">
         <AuthProvider>
-          <FavoritesProvider>
-            <CartProvider>
-              <Announcement />
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </CartProvider>
-          </FavoritesProvider>
+          <ToastProvider>
+            <FavoritesProvider>
+              <CartProvider>
+                <RecentlyViewedProvider>
+                  <Announcement />
+                  <Header />
+                  <main className="flex-1">{children}</main>
+                  <Footer />
+                  <CookieBanner />
+                </RecentlyViewedProvider>
+              </CartProvider>
+            </FavoritesProvider>
+          </ToastProvider>
         </AuthProvider>
       </body>
     </html>

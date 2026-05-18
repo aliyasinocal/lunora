@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import ProductDetailClient from "@/components/product/ProductDetailClient";
 import ProductGrid from "@/components/product/ProductGrid";
+import RecentlyViewed from "@/components/product/RecentlyViewed";
 import { products, getProductBySlug, getRelatedProducts } from "@/data/products";
 
 export function generateStaticParams() {
@@ -50,7 +51,7 @@ export default async function ProductPage(props: PageProps<"/urun/[slug]">) {
       </Container>
 
       {related.length > 0 && (
-        <section className="bg-sand-soft py-20 md:py-24">
+        <section className="bg-sand py-20 md:py-24">
           <Container size="wide">
             <div className="text-center mb-12">
               <span className="text-[10px] uppercase tracking-wider-3 text-ink/55">
@@ -64,6 +65,8 @@ export default async function ProductPage(props: PageProps<"/urun/[slug]">) {
           </Container>
         </section>
       )}
+
+      <RecentlyViewed excludeId={product.id} />
     </>
   );
 }
