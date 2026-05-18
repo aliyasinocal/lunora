@@ -163,48 +163,78 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT — image */}
-        <div className="relative h-[58vh] lg:h-auto bg-ink overflow-hidden">
-          <motion.div
-            style={{ scale: imageScale, y: imageY }}
-            className="absolute inset-0"
-          >
-            <Image
-              src="/images/products/essence-set-navy.jpg"
-              alt="Essence of Calm Ritüel Seti"
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </motion.div>
-          {/* gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-ink/5 to-ink/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
-
-          {/* Vertical text — desktop */}
-          <motion.div
-            initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, delay: 0.6 }}
-            className="hidden lg:flex absolute top-10 right-10 flex-col items-center gap-3 [writing-mode:vertical-rl] text-[10px] uppercase tracking-wider-3 text-sand/65"
-          >
-            <span>MMXXVI</span>
-            <span className="w-px h-12 bg-sand/30" />
-            <span>Essence of Calm</span>
-          </motion.div>
+        {/* RIGHT — image card on textured dark canvas */}
+        <div className="relative h-[58vh] lg:h-auto overflow-hidden bg-gradient-to-br from-ink via-ink-soft to-ink-deep">
+          {/* subtle radial light */}
+          <div
+            className="absolute inset-0 opacity-[0.06] pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 30% 20%, #c8a668 0%, transparent 40%), radial-gradient(circle at 70% 80%, #c8a668 0%, transparent 35%)",
+            }}
+          />
 
           {/* Top-left label */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="absolute top-10 left-10 flex items-center gap-3 text-sand/70"
+            className="absolute top-8 left-8 lg:top-10 lg:left-10 flex items-center gap-3 text-sand/70 z-10"
           >
             <span className="w-8 h-px bg-gold" />
             <span className="text-[10px] uppercase tracking-wider-3">Limited</span>
           </motion.div>
 
+          {/* Vertical year text */}
+          <motion.div
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.6 }}
+            className="hidden lg:flex absolute top-10 right-10 flex-col items-center gap-3 [writing-mode:vertical-rl] text-[10px] uppercase tracking-wider-3 text-sand/65 z-10"
+          >
+            <span>MMXXVI</span>
+            <span className="w-px h-12 bg-sand/30" />
+            <span>Essence of Calm</span>
+          </motion.div>
+
+          {/* Bottom-left brand mark */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.4 }}
+            className="hidden md:block absolute bottom-8 left-8 lg:bottom-10 lg:left-10 z-10 text-sand/60"
+          >
+            <div className="font-display text-base tracking-wider-2">LUNORA</div>
+            <div className="text-[9px] uppercase tracking-wider-3 mt-1">
+              Sakinliğin Özü
+            </div>
+          </motion.div>
+
+          {/* Image card — capped at native size, never stretched */}
+          <motion.div
+            style={{ scale: imageScale, y: imageY }}
+            className="absolute inset-0 flex items-center justify-center p-8 md:p-12 lg:p-14"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.94 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+              className="relative w-full max-w-[440px] aspect-[816/906] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] ring-1 ring-sand/10"
+            >
+              <Image
+                src="/images/products/essence-set-navy.jpg"
+                alt="Essence of Calm Ritüel Seti"
+                fill
+                priority
+                quality={95}
+                sizes="(min-width: 1024px) 440px, (min-width: 640px) 60vw, 90vw"
+                className="object-cover"
+              />
+              {/* gold corner accents */}
+              <span className="absolute -top-3 -left-3 w-10 h-10 border-l border-t border-gold/70" />
+              <span className="absolute -bottom-3 -right-3 w-10 h-10 border-r border-b border-gold/70" />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
