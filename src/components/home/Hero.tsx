@@ -146,9 +146,9 @@ export default function Hero() {
               className="mt-14 lg:mt-16 grid grid-cols-3 gap-6 max-w-md border-t border-ink/15 pt-7"
             >
               {[
-                { num: "32+", label: "Ritüel objesi" },
-                { num: "%100", label: "Doğal içerik" },
-                { num: "5", label: "Showroom" },
+                { num: "3", label: "Koleksiyon" },
+                { num: "%100", label: "El yapımı" },
+                { num: "6", label: "Showroom" },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="font-display text-3xl md:text-4xl text-ink leading-none">
